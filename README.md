@@ -80,10 +80,7 @@ Installs Anthropic's official Claude Code CLI if not already present, then confi
 - **Status line** — Shows model, cost, and context usage
 - **Tool Search** — Keeps context efficient by deferring MCP tool schemas
 
-### Step 5: Validate Your License
-Prompts for the license key from your purchase email (format: `RT-XXXX-XXXX-XXXX-XXXX`). Validates it against our license server. If the server is unreachable, it still lets you proceed (offline fallback).
-
-### Step 6: Install Skills Pack
+### Step 5: Install Skills Pack
 Copies files to your `~/.claude/` directory:
 
 ```
@@ -98,7 +95,7 @@ Copies files to your `~/.claude/` directory:
 
 **Nothing is modified outside `~/.claude/`.** Your existing projects, configs, and tools are untouched.
 
-### Step 7: Cleanup
+### Step 6: Cleanup
 Deletes the temporary clone of the private repo. Nothing lingers.
 
 ---
@@ -283,9 +280,6 @@ Claude Code didn't install correctly. Run the installer manually:
 - **Mac/Linux:** `curl -fsSL https://claude.ai/install.sh | bash -s latest`
 - **Windows:** `irm https://claude.ai/install.ps1 | iex`
 
-### License validation failed
-Check that your key matches the format `RT-XXXX-XXXX-XXXX-XXXX` from your purchase email. If the license server is down, the script will let you proceed anyway.
-
 ### Skills aren't loading in Claude Code
 1. Make sure you restarted Claude Code after setup
 2. Check skills exist: `ls ~/.claude/skills | head`
@@ -313,7 +307,6 @@ Every skill, script, and configuration file in Rising Tides has been security au
 The setup scripts only:
 - Install well-known tools from official sources (Homebrew, NodeSource, winget, npm)
 - Copy files to `~/.claude/` — nothing is modified outside that directory
-- Validate your license against our server over HTTPS
 - Clean up temporary files when done
 
 ---
